@@ -1,0 +1,75 @@
+*carbon.nvim.txt*    Carbon.nvim Theme
+
+==============================================================================
+CONTENTS                                          *carbon.nvim-contents*
+
+  1. Introduction ........................ |carbon.nvim-introduction|
+  2. Installation ........................ |carbon.nvim-installation|
+  3. Usage ............................... |carbon.nvim-usage|
+  4. Configuration ....................... |carbon.nvim-configuration|
+  5. Variants ............................ |carbon.nvim-variants|
+
+==============================================================================
+INTRODUCTION                                  *carbon.nvim-introduction*
+
+Carbon.nvim is a dark Neovim theme with 4 accent variants.
+
+==============================================================================
+INSTALLATION                                  *carbon.nvim-installation*
+
+Using lazy.nvim:
+>lua
+  {
+    "your-username/carbon.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  }
+<
+
+==============================================================================
+USAGE                                                *carbon.nvim-usage*
+
+>lua
+  require("carbon").setup({ style = "mochi" })
+  vim.cmd("colorscheme carbon")
+<
+
+Switch styles:
+>vim
+  :CarbonStyle rice
+  :CarbonStyle mochi
+  :CarbonStyle cottoncandy
+  :CarbonStyle blaze
+<
+
+==============================================================================
+CONFIGURATION                                *carbon.nvim-configuration*
+
+Default options:
+>lua
+  {
+    style = "mochi",
+    transparent = false,
+    terminal_colors = true,
+    styles = {
+      comments = { italic = true },
+      keywords = { italic = true },
+      sidebars = "dark",
+      floats = "dark",
+    },
+    dim_inactive = false,
+    cache = true,
+    plugins = { all = true, auto = true },
+  }
+<
+
+==============================================================================
+VARIANTS                                      *carbon.nvim-variants*
+
+|carbon-rice|        - White accent (#ffffff)
+|carbon-mochi|       - Pink accent (#ff669e)
+|carbon-cottoncandy| - Indigo accent (#758aff)
+|carbon-blaze|       - Red accent (#f85044)
+
+ vim:tw=78:ts=8:ft=help:norl:

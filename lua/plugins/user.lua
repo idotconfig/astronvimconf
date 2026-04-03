@@ -18,6 +18,13 @@ return {
   },
 
   {
+    dir = vim.fn.stdpath("config") .. "/themes/Carbon.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = { style = "blaze" },
+  },
+
+  {
     "Civitasv/cmake-tools.nvim",
     ft = { "c", "cpp", "cmake" }, -- Optional: load only for these filetypes
     config = function()
@@ -25,6 +32,19 @@ return {
         -- Optional: your custom config here, or leave empty for defaults
       }
     end,
+  },
+
+  -- tailwind-tools.lua
+  {
+    "luckasRanarison/tailwind-tools.nvim",
+    name = "tailwind-tools",
+    build = ":UpdateRemotePlugins",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-telescope/telescope.nvim", -- optional
+      "neovim/nvim-lspconfig", -- optional
+    },
+    opts = {}, -- your configuration
   },
 
   --[[  {
