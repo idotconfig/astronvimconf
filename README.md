@@ -30,3 +30,5 @@ git clone https://github.com/idotconfig/astronvimconf ~/.config/nvim
 ```shell
 nvim
 ```
+
+NOTE: its not ready yet im lazy
